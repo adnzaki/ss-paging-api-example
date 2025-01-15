@@ -15,7 +15,7 @@ class AllowCors implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         header('Access-Control-Allow-Origin: *');
-        header('Access-Control-Allow-Headers: Authorization, Content-type');
+        header('Access-Control-Allow-Headers: Authorization, Content-type, limit, offset, orderBy, sort');
     }
 
     /**
