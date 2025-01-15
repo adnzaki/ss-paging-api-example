@@ -38,7 +38,7 @@ class Customers extends BaseController
         }
 
         $response = $model->orderBy($orderBy, $sort)->findAll($limit, $offset);
-        $rows = empty($search) ? $model->countAllResults() : $model->countResults($searchBy, (string)$search);
+        $rows = empty($search) ? $model->countAllResults() : $model->like($searchBy, $search)->countAllResults();
         
         return $this->response->setJSON([
             'container' => $response,
