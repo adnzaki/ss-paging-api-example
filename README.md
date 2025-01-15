@@ -16,9 +16,17 @@ The URL provided by this example is:
 ```
 http://your-domain/public/customer/get-data/(limit)/(offset)/(orderBy)/(searchBy)/(sort)/(search)
 ```
+Or if you choose to use HTTP header options, the URL will be:
+```
+http://your-domain/public/customer/get-customer/(searchBy)/(search)
+```
 If you serve with SparkCLI in your local machine, then the URL will be: 
 ```
 http://localhost:8080/customer/get-data/(limit)/(offset)/(orderBy)/(searchBy)/(sort)/(search)
+```
+Or if you choose to use HTTP header options:
+```
+http://localhost:8080/customer/get-customer/(searchBy)/(search)
 ```
 You are free to modify this example to match your own use case.
 
