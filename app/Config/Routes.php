@@ -11,6 +11,7 @@ $routes->group('customer', function (RouteCollection $routes) {
     // $routes->add('get-customer', 'Customers::getCustomersUsingHeaders');
     $routes->add('get-customer/(:any)', 'Customers::getCustomersUsingHeaders/$1');
     $routes->add('get-customer/(:any)/(:any)', 'Customers::getCustomersUsingHeaders/$1/$2');
+    $routes->add('get-using-post', 'Customers::getCustomersUsingPost');
 });
 
 $routes->add('run-command', 'CommandRunner::runCommand');
